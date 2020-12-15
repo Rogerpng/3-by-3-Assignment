@@ -23,9 +23,9 @@ void setup() {
   rectWidth = width*1/4;
   rectHeight = height*1/4;
 
-pic = loadImage();
+pic = loadImage("ChickenPicture.jpg");
 
-  imageX = width*2/5;
+  imageX = width*1/4;
   imageY = height*2/5;
   imageWidth = width*1/4;
   imageHeight = height*1/4;
