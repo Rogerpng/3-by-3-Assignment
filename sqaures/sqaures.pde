@@ -36,6 +36,10 @@ void setup() {
   pt4Y = pt1Y;
   pt5X = pt1X;
   pt5Y = height*1/3;
+  pt6X = width*1/3;
+  pt6Y = height*1/3;
+  pt7X = width*2/3;
+  pt7Y = height*1/3;
   pt9X = pt1X;
   pt9Y = height*2/3;
   pt13X = pt1X;
@@ -60,7 +64,10 @@ void draw() {
   rect(pt10X, pt10Y, rectWidth, rectHeight);
   rect(pt11X, pt11Y, rectWidth, rectHeight);
   //
-  rect(pt12
+  rect(pt12X, pt12Y, rectWidth, rectHeight);
+  
+  
+  
 //points
   rect(pt1X, pt1Y, rectWidth, rectHeight);
   fill(black);
@@ -70,6 +77,7 @@ void draw() {
   ellipse(pt3X, pt3Y, ptDiameter, ptDiameter);
   ellipse(pt4X, pt4Y, ptDiameter, ptDiameter);
   ellipse(pt5X, pt5Y, ptDiameter, ptDiameter);
+  ellipse(pt6X, pt6Y, ptDiameter, ptDiameter);
   ellipse(pt9X, pt9Y, ptDiameter, ptDiameter);
   ellipse(pt13X, pt13Y, ptDiameter, ptDiameter);
   fill(white);
