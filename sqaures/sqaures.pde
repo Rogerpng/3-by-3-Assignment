@@ -30,15 +30,15 @@ void setup() {
   size(600, 400);
 
   //Buttons
-  buttonX = width*1/3;
-  buttonY = height*1/3;
-  buttonWidth = width*2/3;
-  buttonHeight = height*1/3;
+  buttonX = width* 1/3*1/3;
+  buttonY = height* 1/3*1/3;
+  buttonWidth = width* 1/3*1/3;
+  buttonHeight = height* 1/3*1/3;
 
-  button2X = width*3/5;
-  button2Y = height*2/4;
-  button2Width = width*1/4;
-  button2Height = height*1/4;
+  button2X = width*3/6;
+  button2Y = height*2/6;
+  button2Width = width*1/3 * 1/2;
+  button2Height = height*1/3 * 1/2;
 
   //points
   ptDiameter = width*1/27;
@@ -74,54 +74,56 @@ void setup() {
   pt15Y = pt13Y;
   pt16X = pt4X;
   pt16Y = pt13Y;
-
 }
 
 void draw() {
 
- if (mouseX>buttonX && mouseX<buttonX+buttonWidth && mouseY>buttonY && mouseY<buttonY+buttonHeight) {
-    buttonColour = yellow;
+
+  //Button 1 Hoverover
+  if ( mouseX>=buttonX && mouseX<=buttonX+buttonWidth && mouseY>=buttonY && mouseY<=buttonY+buttonHeight ) {
+    fill(red);
+    rect(buttonX, buttonY, buttonWidth, buttonHeight);
   } else {
-    buttonColour = red;
-  } // End If
+    fill(purple);
+    rect(buttonX, buttonY, buttonWidth, buttonHeight);
 
-  buttonColour = purple;
-  fill(buttonColour);
-  rect(button2X, button2Y, button2Width, button2Height);
-  fill(resetWhite);
+    //Button 1
+    fill(buttonColour = red);
+    fill(buttonColour);
+    rect(buttonX, buttonY, buttonWidth, buttonHeight);
 
-  buttonColour = red;
-  fill(buttonColour);
-  rect(buttonX, buttonY, buttonWidth, buttonHeight);
-  fill(resetWhite);
-  
-  if (mouseX>button2X && mouseX<button2X+button2Width && mouseY>button2Y && mouseY<button2Y+button2Height) {
-    buttonColour = yellow;
-  } else {
-    buttonColour = red;
-  } // End If
-  
-  
-  //rect
-  rectWidth = width*1/3;
-  rectHeight = height*1/3;
-  
-  rect(pt1X, pt1Y, rectWidth, rectHeight);
-  rect(pt2X, pt2Y, rectWidth, rectHeight);
-  rect(pt3X, pt3Y, rectWidth, rectHeight);
-  //
-  rect(pt5X, pt5Y, rectWidth, rectHeight);
-  rect(pt6X, pt6Y, rectWidth, rectHeight);
-  rect(pt7X, pt7Y, rectWidth, rectHeight);
-  //
-  rect(pt9X, pt9Y, rectWidth, rectHeight);
-  rect(pt10X, pt10Y, rectWidth, rectHeight);
-  rect(pt11X, pt11Y, rectWidth, rectHeight);
-  //
-  rect(pt12X, pt12Y, rectWidth, rectHeight);
+    //Button 2 Hoverover
+    if ( mouseX>=button2X && mouseX<=button2X+button2Width && mouseY>=button2Y && mouseY<=button2Y+button2Height ) {
+      fill(purple);
+      rect(button2X, button2Y, button2Width, button2Height);
+    } else {
+      fill(yellow);
+      rect(button2X, button2Y, button2Width, button2Height); 
 
+      //Button 2
+      fill(buttonColour = purple);
+      fill(buttonColour);
+      rect(button2X, button2Y, button2Width, button2Height);
 
-  {
+      //rect
+      rectWidth = width*1/3;
+      rectHeight = height*1/3;
+
+      fill(white);
+      rect(pt1X, pt1Y, rectWidth, rectHeight);
+      rect(pt2X, pt2Y, rectWidth, rectHeight);
+      rect(pt3X, pt3Y, rectWidth, rectHeight);
+      //
+      rect(pt5X, pt5Y, rectWidth, rectHeight);
+      rect(pt6X, pt6Y, rectWidth, rectHeight);
+      rect(pt7X, pt7Y, rectWidth, rectHeight);
+      //
+      rect(pt9X, pt9Y, rectWidth, rectHeight);
+      rect(pt10X, pt10Y, rectWidth, rectHeight);
+      rect(pt11X, pt11Y, rectWidth, rectHeight);
+      //
+      rect(pt12X, pt12Y, rectWidth, rectHeight);
+    }
     //points
     fill(black);
     ellipse(pt1X, pt1Y, ptDiameter, ptDiameter);
@@ -145,11 +147,8 @@ void draw() {
   }
 }
 
-void keyPressed() {
-}
-
 void mousePressed() {
- if (mouseX>button2X && mouseX<button2X+button2Width && mouseY>button2Y && mouseY<button2Y+button2Height) 
-  
-  if (mouseX>buttonX && mouseX<buttonX+buttonWidth && mouseY>buttonY && mouseY<buttonY+buttonHeight);
+  if (mouseX>button2X && mouseX<button2X+button2Width && mouseY>button2Y && mouseY<button2Y+button2Height) 
+
+    if (mouseX>buttonX && mouseX<buttonX+buttonWidth && mouseY>buttonY && mouseY<buttonY+buttonHeight); 
 }//End mousePressed
